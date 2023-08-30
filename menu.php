@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>RENTAL MOBIL SINHAYU TRANS</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="<?= base_url()?>assets/vendors/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/vendors/selectFX/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/vendors/jqvmap/dist/jqvmap.min.css">
-
+    <link rel="stylesheet" href="<?= base_url()?>assets/vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?= base_url()?>assets/vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
 
     <link rel="stylesheet" href="<?= base_url()?>assets/css/style.css">
 
@@ -39,7 +40,8 @@
         <nav class="navbar navbar-expand-sm navbar-default">
 
             <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="./"><img src="images/logo.png" alt="Logo"></a>
@@ -52,34 +54,35 @@
                         <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <h3 class="menu-title">Data Master</h3><!-- /.menu-title -->
-                    
+
                     <li>
-                        <a href="widgets.html"> <i class="menu-icon fa fa-user"></i>Pengguna </a>
+                        <a href="<?= base_url()?>administrator/Pengguna"> <i class="menu-icon fa fa-user"></i>Pengguna
+                        </a>
                         <a href="widgets.html"> <i class="menu-icon fa fa-users"></i>Customer </a>
                         <a href="widgets.html"> <i class="menu-icon fa fa-car"></i>Mobil </a>
                     </li>
 
                     <h3 class="menu-title">Transaksi</h3><!-- /.menu-title -->
-                    
+
                     <li>
                         <a href="widgets.html"> <i class="menu-icon fa fa fa-book"></i>Data Transaksi </a>
                         <a href="widgets.html"> <i class="menu-icon fa fa-credit-card"></i>Konfirmasi </a>
                     </li>
 
                     <h3 class="menu-title">Laporan</h3><!-- /.menu-title -->
-                    
+
                     <li>
                         <a href="widgets.html"> <i class="menu-icon fa fa-flag-o"></i>Laporan </a>
                     </li>
 
                     <h3 class="menu-title">Pengaturan</h3><!-- /.menu-title -->
-                    
+
                     <li>
                         <a href="widgets.html"> <i class="menu-icon fa fa-address-card-o"></i>Rekening </a>
                         <a href="widgets.html"> <i class="menu-icon fa fa-picture-o"></i>Logo </a>
                         <a href="widgets.html"> <i class="menu-icon fa fa-header"></i>Header </a>
                     </li>
-                    
+
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -100,16 +103,14 @@
                     <h5 class="text-center">Selamat Datang di Website Rental Mobil Sinhayu</h5>
                 </div>
                 <div class="col-sm-5">
-                    <div class="float-right"> 
-                      <a href="" class="btn btn-danger"><i class="fa fa-sign-out"></i> Logout</a>
+                    <div class="float-right">
+                        <a href="" class="btn btn-danger"><i class="fa fa-sign-out"></i> Logout</a>
                     </div>
                 </div>
-                
+
             </div>
 
         </header><!-- /header -->
         <!-- Header-->
 
         <div class="content mt-3">
-
-        
