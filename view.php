@@ -3,6 +3,8 @@
         <div class="row">
 
             <div class="col-md-12">
+
+                <a href="<?= base_url()?>administrator/Pengguna/form_pengguna" class="btn btn-dark mb-3"> <i class="fa fa-user-plus"></i> Tambah Pengguna</a>
                 <div class="card">
                     <div class="card-header bg-dark">
                         <strong class="card-title text-white">Data Pengguna</strong>

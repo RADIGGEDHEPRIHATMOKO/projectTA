@@ -16,4 +16,11 @@ class Pengguna Extends CI_Controller{
         $this->load->view('admin/templates/footer.php');
 
     }
+
+    public function form_pengguna()
+    {
+        $this->load->view('admin/templates/menu.php');
+        $this->load->view('admin/pengguna/form.php');
+        $this->load->view('admin/templates/footer.php');
+    }
 }
