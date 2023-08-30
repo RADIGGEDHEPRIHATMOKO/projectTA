@@ -5,8 +5,8 @@
     public function prosesLogin($email,$password)
     {
         $pass = md5($password);
-        $this->db->where('email', '$email');
-        $this->db->where('password', '$pass');
+        $this->db->where('email', $email);
+        $this->db->where('password', $pass);
         $query = $this->db->get('admin');
 
         if ($query->num_rows()>0) {
