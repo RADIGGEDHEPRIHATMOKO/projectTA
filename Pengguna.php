@@ -48,4 +48,12 @@ class Pengguna Extends CI_Controller{
             redirect('administrator/Pengguna/form_pengguna');
         }
     }
+
+    public function edit($id_admin)
+    {
+        $data['pengguna'] = $this->Pengguna_model->edit($id_admin);
+        $this->load->view('admin/templates/menu.php');
+        $this->load->view('admin/pengguna/edit.php', $data);
+        $this->load->view('admin/templates/footer.php');
+    }
 }

@@ -34,7 +34,7 @@
                                     <td><?= $row->email;?></td>
                                     <td><?= $row->password;?></td>
                                     <td>
-                                        <a href="" class= "btn btn-success btn-sm">Edit</a>
+                                        <a href="<?= base_url()?>administrator/Pengguna/edit/<?= $row->id_admin;?>" class= "btn btn-success btn-sm">Edit</a>
                                         <a href="" class= "btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
