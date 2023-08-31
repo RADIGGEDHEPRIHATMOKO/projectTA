@@ -14,9 +14,11 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Poto</th>
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Password</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -25,9 +27,16 @@
                                 foreach ($pengguna as $row) { ?>
                                 <tr>
                                     <td><?= $no++;?></td>
+                                    <td>
+                                        <img src="<?= base_url()?>assets/images/pengguna/<?= $row->poto;?>" alt="" width="80">
+                                    </td>
                                     <td><?= $row->nama_admin;?></td>
                                     <td><?= $row->email;?></td>
                                     <td><?= $row->password;?></td>
+                                    <td>
+                                        <a href="" class= "btn btn-success btn-sm">Edit</a>
+                                        <a href="" class= "btn btn-danger btn-sm">Delete</a>
+                                    </td>
                                 </tr>
                                 <?php }
                                 ?>
@@ -39,3 +48,17 @@
         </div>
     </div>
 </div>
+
+<script>
+
+        <?php 
+        if ($this->session->flashdata('info')){ ?>
+            Swal.fire({
+            icon: 'success',
+            title: 'Sukses',
+            text: '<?= ($this->session->flashdata('info'));?>'
+        })
+
+        <?php }
+        ?>
+    </script>

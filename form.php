@@ -10,25 +10,25 @@
                     </div>
                     <div class="card-body">
 
-                        <form>
+                        <form method="post" action="<?= base_url()?>administrator/Pengguna/simpan" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label>Nama</label>
-                                <input type="text" name="nama_admin" class="form-control" placeholder="Masukkan nama">
+                                <input type="text" name="nama_admin" class="form-control" placeholder="Masukkan nama" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" name="email" class="form-control" placeholder="Masukkan Email">
+                                <input type="email" name="email" class="form-control" placeholder="Masukkan Email" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="text" name="password" class="form-control" placeholder="Masukkan Password">
+                                <input type="text" name="password" class="form-control" placeholder="Masukkan Password" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Upload foto</label>
-                                <input type="file" name="poto" class="form-control" placeholder="Upload foto">
+                                <input type="file" name="poto" class="form-control" placeholder="Upload foto" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Simpan</button>
