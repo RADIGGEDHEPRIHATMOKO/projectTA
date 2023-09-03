@@ -12,7 +12,12 @@
 
                         <form method="post" action="<?= base_url()?>administrator/Pengguna/update" enctype="multipart/form-data">
                             <div class="form-group">
-                                <label>Nama</label>
+                                <label>Id Admin</label>
+                                <input type="text" name="id_admin" value="<?= $pengguna['id_admin'];?>" class="form-control" placeholder="Masukkan nama" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Nama Admin</label>
                                 <input type="text" name="nama_admin" value="<?= $pengguna['nama_admin'];?>" class="form-control" placeholder="Masukkan nama" required>
                             </div>
 
@@ -29,9 +34,10 @@
                             <div class="form-group">
                                 <label>Upload foto</label>
                                 <input type="file" name="poto" class="form-control" placeholder="Upload foto">
+                                <br>
                                 <?php 
                                 if(!empty($pengguna['poto'])){ ?>
-                                <img src="<?= base_url()?>assets/images/pengguna/<?= $pengguna['poto'];?>" alt="">
+                                <img src="<?= base_url()?>assets/images/pengguna/<?= $pengguna['poto'];?>" alt="" width="200">
                                 <?php }else { ?>
                                     <small class="text-danger"> Poto Tidak Tersedia </small>
                                     <?php 

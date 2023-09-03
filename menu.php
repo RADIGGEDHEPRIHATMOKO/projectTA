@@ -61,7 +61,7 @@
                         <a href="<?= base_url()?>administrator/Pengguna"> <i class="menu-icon fa fa-user"></i>Pengguna
                         </a>
                         <a href="widgets.html"> <i class="menu-icon fa fa-users"></i>Customer </a>
-                        <a href="widgets.html"> <i class="menu-icon fa fa-car"></i>Mobil </a>
+                        <a href="<?= base_url()?>Administrator/Mobil"> <i class="menu-icon fa fa-car"></i>Mobil </a>
                     </li>
 
                     <h3 class="menu-title">Transaksi</h3><!-- /.menu-title -->

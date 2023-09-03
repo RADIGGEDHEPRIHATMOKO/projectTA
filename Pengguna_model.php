@@ -12,4 +12,16 @@ class Pengguna_model Extends CI_Model{
         $this->db->where('id_admin', $id_admin);
         return $this->db->get('admin')->row_array();
     }
+
+    public function update($id_admin, $data)
+    {
+        $this->db->where('id_admin', $id_admin);
+        $this->db->update('admin', $data);
+    }
+
+    public function delete($id_admin)
+    {
+        $this->db->where('id_admin', $id_admin);
+        $this->db->delete('admin');
+    }
 }

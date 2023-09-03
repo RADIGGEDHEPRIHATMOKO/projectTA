@@ -35,7 +35,7 @@
                                     <td><?= $row->password;?></td>
                                     <td>
                                         <a href="<?= base_url()?>administrator/Pengguna/edit/<?= $row->id_admin;?>" class= "btn btn-success btn-sm">Edit</a>
-                                        <a href="" class= "btn btn-danger btn-sm">Delete</a>
+                                        <a href="<?= base_url()?>administrator/Pengguna/delete/<?= $row->id_admin;?>" class= "btn btn-danger btn-sm" onclick= "return confirm('Yakin Menghapus?');">Delete</a>
                                     </td>
                                 </tr>
                                 <?php }

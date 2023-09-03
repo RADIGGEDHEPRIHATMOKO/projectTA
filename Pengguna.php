@@ -56,4 +56,54 @@ class Pengguna Extends CI_Controller{
         $this->load->view('admin/pengguna/edit.php', $data);
         $this->load->view('admin/templates/footer.php');
     }
+
+    public function update()
+    {
+        $id_admin = $this->input->post('id_admin');
+        $config['upload_path']          = 'assets/images/pengguna';
+        $config['allowed_types']        = 'img|jpg|png';
+        $config['max_size']             = 1024;
+        $this->load->library('upload', $config);
+        if (!empty($_FILES['poto']['name'])) {
+            $this->upload->do_upload('poto');
+            $upload = $this->upload->data();
+            $image = $upload['file_name'];
+
+            $data = array(
+                'nama_admin'    => $this->input->post('nama_admin'),
+                'email'         => $this->input->post('email'),
+                'password'      => md5($this->input->post('password')),
+                'poto'          => $image
+            );
+            $id = $this->db->get_where('admin',['id_admin' => $id_admin])->row();
+            $update = $this->Pengguna_model->update($id_admin, $data);
+            if ($update = true) {
+                $this->session->set_flashdata('info', 'Data berhasil disimpan');
+                unlink('assets/images/pengguna/'.$id->poto);
+                redirect('administrator/Pengguna');
+            }
+        }else{
+            $data = array(
+                'nama_admin'    => $this->input->post('nama_admin'),
+                'email'         => $this->input->post('email'),
+                'password'      => md5($this->input->post('password'))
+            );
+            $update = $this->Pengguna_model->update($id_admin, $data);
+            if ($update = true) {
+                $this->session->set_flashdata('info', 'Data berhasil disimpan');
+                redirect('administrator/Pengguna');
+            }
+        }
+    }
+
+    public function delete($id_admin)
+    {
+        $id = $this->db->get_where('admin',['id_admin' => $id_admin])->row();
+        $delete = $this->Pengguna_model->delete($id_admin);
+        if ($delete = true) {
+            $this->session->set_flashdata('info', 'Data berhasil didelete');
+            unlink('assets/images/pengguna/'.$id->poto);
+            redirect('administrator/Pengguna');
+        }
+    }
 }
